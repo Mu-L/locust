@@ -1,8 +1,8 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 
 def format_utc_timestamp(unix_timestamp):
-    return datetime.fromtimestamp(int(unix_timestamp), timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.fromtimestamp(int(unix_timestamp), UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def format_safe_timestamp(unix_timestamp):

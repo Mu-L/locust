@@ -149,13 +149,14 @@ local_scheme = "no-local-version"
 [tool.hatch.build.targets.BuildFrontend.hooks.custom]
 
 [tool.ruff]
-target-version = "py310"
+target-version = "py311"
 line-length = 120
+force-exclude = true
 extend-exclude = [
     "build",
     "examples/issue_*.py",
     "src/readthedocs-sphinx-search/",
-    "examples/grpc/hello_pb2.py",
+    "examples/grpc/hello_pb2*.py",
 ]
 lint.ignore = ["E402", "E501", "E713", "E731", "E741", "UP031", "PERF203"]
 lint.select = ["E", "F", "W", "UP", "FA102", "I001", "FURB", "PERF"]
