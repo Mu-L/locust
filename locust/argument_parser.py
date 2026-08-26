@@ -15,6 +15,7 @@ import socket
 import sys
 import tempfile
 import textwrap
+import tomllib
 from collections import OrderedDict
 from typing import Any, NamedTuple
 from urllib.parse import urlparse
@@ -23,7 +24,6 @@ from uuid import uuid4
 import configargparse
 import gevent
 import requests
-import tomllib
 
 from .util.directory import get_abspaths_in
 from .util.timespan import parse_timespan

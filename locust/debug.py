@@ -8,7 +8,7 @@ from locust.exception import CatchResponseError, RescheduleTask
 
 import inspect
 import os
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -78,7 +78,7 @@ class PrintListener:
 
         if self.include_time:
             if start_time:
-                _print_t(datetime.fromtimestamp(start_time, tz=timezone.utc))
+                _print_t(datetime.fromtimestamp(start_time, tz=UTC))
             else:
                 _print_t(datetime.now())
 
